@@ -1,7 +1,7 @@
-What is the Optimal Length of the NBA Season?
+# What is the Optimal Length of the NBA Season?
 
 
-1.	Introduction and Methodology
+## Introduction and Methodology
 
 In this analysis, I study the optimal length of the NBA season. I consider the question from a competitive perspective, and ignore financial implications.  My underlying assumption is that at any point during the season, a team’s ability is best measured by its point differential rather than its record.
 
@@ -29,9 +29,7 @@ Given the high correlation between winning percentage and point differential, I 
 The regression coefficient of average differential is stable over the past twenty full seasons (including the two lockout years).  This suggests that it is valid to use parameters from the logistic regression in a large simulation. 
 
 
-
-
-2.	Output of the Simulation
+## Output of the Simulation
 
 Given a logistic model and average point differentials it is simple to simulate NBA seasons and measure the improvement in standings as the season progresses.
 
@@ -42,13 +40,9 @@ The first measure, the error between the actual standings and what the standings
 
 As the season progresses, we see a similar decline in the turnover in the standings.  By the 40th game, the average team moves by 0.6 places (in a 30 team league) up or down every two games played.  By the 60th game, the average team moves by just 0.4 places every two games.  Compared to an 82 game season, the games at the end of a 60 game season would be 28% more influential to the final standings.
 
-
-
-
 Based only on simulation results, these measures show that the NBA season could be 40-60 games in length, with the result that the best teams end up with the best records and the importance of each game is greater.  In the following section I examine how closely the simulation mirrors data from the past twenty seasons.  For simplicity, I focus only on the MSE measure.
 
-
-3.	Comparison to Past Twenty Seasons
+## Comparison to Past Twenty Seasons
 
 The simulation simplifies a good deal: there is no account for a change in a team’s performance over the course of the season (injuries, trades, improvement/deterioration in play), long stretches of games at home or on the road, or unbalanced strength of schedule, to name a few.
 
@@ -85,8 +79,7 @@ With these seasons excluded, the actual MSE over the course of the season resemb
 
 
 
-
-4. Conclusion
+## Conclusion
 
 The NBA season has been 82 games long since the 1967-68 season, with the exception of two seasons shortened by lockouts.  Ignoring the financial implications of a shorter or longer schedule, what are the important competitive considerations?
 
