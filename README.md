@@ -1,4 +1,5 @@
-# What is the Optimal Length of the NBA Season?
+# What is the Optimal Length of the NBA Season? 
+### (Hint: A lot shorter than it is now!)
 
 
 ## Introduction and Methodology
