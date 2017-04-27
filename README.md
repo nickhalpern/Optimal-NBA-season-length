@@ -1,6 +1,15 @@
 # What is the Optimal Length of the NBA Season? 
 ### (Hint: A lot shorter than it is now!)
 
+## Summary
+
+o	We can use the average point differential as a proxy for how good a team is.  Literature shows that point differential is more predictive of future record than current record.
+
+o	Using this, we an estimate the probability Team A beats Team B based on difference in point differential, and which team is the home team.  Then we can simualate an entire season, and see how quickly the simulated standings converge to the point differential rankings.
+
+o	Standings are always "improving" but there is a step drop-off around 40 games.  The simulated data is corroborated by actual win-loss progression from the past twenty years.  *This analysis suggests the NBA season could be half as long without significantly affecting the "accuracy" of win-loss standings.*
+
+
 
 ## Introduction and Methodology
 
