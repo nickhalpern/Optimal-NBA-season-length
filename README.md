@@ -21,13 +21,15 @@ To see how these considerations are affected by the length of a season, I ran 10
 
 Average point differential is commonly assumed to be a better indicator of team skill than winning percentage.  Over the course of the season, winning percentage is over 95% correlated with point differential.  The chart below graphs the average point differential against winning percentage for the 2014-15 season. 
 
+![Point Differential vs. Winning Percentage](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba1.png)
 
 Given the high correlation between winning percentage and point differential, I run a simple logistic regression with road team victory as the dependent variable, and independent variable difference in average point differential (plus an intercept, which is interpreted as the road team disadvantage).
 
-
+![Point Differential vs. Single Game Outcome](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba2.png)
 
 The regression coefficient of average differential is stable over the past twenty full seasons (including the two lockout years).  This suggests that it is valid to use parameters from the logistic regression in a large simulation. 
 
+![Stability of Regression](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba3.png)
 
 ## Output of the Simulation
 
@@ -37,8 +39,11 @@ The charts below show the average MSE as the season progresses and average amoun
 
 The first measure, the error between the actual standings and what the standings would be if they correlated perfectly with point differential, shows a flattening at 40 games and becomes nearly flat at 60 games.  From 40 games to 50 games, the error decreases by 16%; from 60 games to 70 games, the error decreases by just 6%.
 
+![Accuracy of Standings](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba4.png)
 
 As the season progresses, we see a similar decline in the turnover in the standings.  By the 40th game, the average team moves by 0.6 places (in a 30 team league) up or down every two games played.  By the 60th game, the average team moves by just 0.4 places every two games.  Compared to an 82 game season, the games at the end of a 60 game season would be 28% more influential to the final standings.
+
+![Change in Standings](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba5.png)
 
 Based only on simulation results, these measures show that the NBA season could be 40-60 games in length, with the result that the best teams end up with the best records and the importance of each game is greater.  In the following section I examine how closely the simulation mirrors data from the past twenty seasons.  For simplicity, I focus only on the MSE measure.
 
@@ -48,7 +53,7 @@ The simulation simplifies a good deal: there is no account for a change in a tea
 
 The actual average error as the season progresses is different from the simulation, most notably in its slope.  The steeper decline suggests that more games are necessary for the standings to reflect the end-of-season average point differentials closely.
 
-
+![Accuracy of Standings](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba6.png)
 
 The differences are attributable to two broad factors:
 
@@ -66,6 +71,7 @@ For the purposes of this analysis, the most important factor is whether teams ha
 
 As seen in the chart below, approximately 80% of teams (excluding lockout years) have a second half point differential which is within 4 points of their first half point differential.  
 
+![Change in Differential](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba7.png)
 
 Trades and injuries are frequent events during the course of the season (and the latter becomes more likely the longer the season).  In order to filter out teams which have large swings in performance and which do not tend to be relevant in the playoffs, I exclude teams which meet both of the following criteria:
 
@@ -77,7 +83,7 @@ This filter eliminates 22 of 533 observations (533 is 18 non-lockout seasons con
 
 With these seasons excluded, the actual MSE over the course of the season resembles closely the simulation.  In particular, the simulated MSE and the observed MSE with outliers excluded are approximately parallel after 40 games.  This suggests that the conclusions from the simulation also hold for data from actual NBA seasons.
 
-
+![Accuracy of Standings](https://github.com/nickhalpern/Optimal-NBA-season-length/blob/master/nba8.png)
 
 ## Conclusion
 
